@@ -1,0 +1,111 @@
+syntax = "proto3";
+
+package com.benchmarking.grpc;
+
+option java_multiple_files = true;
+
+message GetRequest {
+}
+
+enum E {
+  E1 = 0;
+  E2 = 2;
+  E3 = 3;
+  E4 = 4;
+  E5 = 5;
+}
+
+message FClass {
+  int64 FClass1 = 1;
+  int64 FClass2 = 2;
+  int64 FClass3 = 3;
+  int64 FClass4 = 4;
+  int64 FClass5 = 5;
+  int64 FClass6 = 6;
+  int64 FClass7 = 7;
+  int64 FClass8 = 8;
+  int64 FClass9 = 9;
+  int64 FClass10 = 10;
+}
+
+message BigObject {
+  int64 f1 = 1;
+  int64 f2 = 2;
+  int64 f3 = 3;
+  int64 f4 = 4;
+  int64 f5 = 5;
+  int64 f6 = 6;
+  int64 f7 = 7;
+  int64 f8 = 8;
+  int64 f9 = 9;
+  int64 f10 = 10;
+  string f11 = 11;
+  string f12 = 12;
+  string f13 = 13;
+  string f14 = 14;
+  string f15 = 15;
+  string f16 = 16;
+  string f17 = 17;
+  string f18 = 18;
+  string f19 = 19;
+  string f20 = 20;
+  bool f21 = 21;
+  bool f22 = 22;
+  bool f23 = 23;
+  bool f24 = 24;
+  bool f25 = 25;
+  bool f26 = 26;
+  bool f27 = 27;
+  bool f28 = 28;
+  bool f29 = 29;
+  bool f30 = 30;
+  int32 f31 = 31;
+  int32 f32 = 32;
+  int32 f33 = 33;
+  int32 f34 = 34;
+  int32 f35 = 35;
+  int32 f36 = 36;
+  int32 f37 = 37;
+  int32 f38 = 38;
+  int32 f39 = 39;
+  int32 f40 = 40;
+  double f41 = 41;
+  double f42 = 42;
+  double f43 = 43;
+  double f44 = 44;
+  double f45 = 45;
+  double f46 = 46;
+  double f47 = 47;
+  double f48 = 48;
+  double f49 = 49;
+  double f50 = 50;
+  E f51 = 51;
+  E f52 = 52;
+  E f53 = 53;
+  E f54 = 54;
+  E f55 = 55;
+  E f56 = 56;
+  E f57 = 57;
+  E f58 = 58;
+  E f59 = 59;
+  E f60 = 60;
+  FClass f61 = 61;
+  FClass f62 = 62;
+  FClass f63 = 63;
+  FClass f64 = 64;
+  FClass f65 = 65;
+  FClass f66 = 66;
+  FClass f67 = 67;
+  FClass f68 = 68;
+  FClass f69 = 69;
+  FClass f70 = 70;
+}
+
+message GetResponse {
+  repeated BigObject bigObjects = 1;
+}
+
+
+service SampleService {
+  rpc Get(GetRequest) returns (GetResponse);
+}
